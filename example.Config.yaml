@@ -1,0 +1,16 @@
+ path: /path/to/tracked/app/folder
+  commands:
+    - go run /path/to/tracked/app/folder/application.go
+    - go build -o /path/to/output/for/application /path/to/tracked/app/folder/application.go
+  log: /path/to/chosen/log/folder/log.log
+  exclude_regex:
+    - go\.mod$
+    - go\.sum$
+
+- path: /path/to/tracked/app2/folder
+  commands:
+    - go test ./...
+  log: /path/to/chosen/log2/folder/log2.log
+  exclude_regex:
+    - go\.mod$
+    - go\.sum$
